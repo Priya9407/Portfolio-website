@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="main" id="home">
+      <div class="floating-elements">
+        <div class="float-circle"></div>
+        <div class="float-circle"></div>
+        <div class="float-circle"></div>
+        <div class="float-circle"></div>
+      </div>
+
+      <div class="header">
+        <div class="head">PORTFOLIO</div>
+        <div class="buttons">
+          <a href="#home">Home</a>
+          <a href="#education">AboutMe</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#connect" class="btn">Connect</a>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="text-content">
+          <div class="light-text">Hey!! I'm <span>Priya</span></div>
+          <div class="big-text">DESIGNER & <br />DEVELOPER</div>
+          <div class="small-text">
+            On a journey through code and design, always<br />
+            exploring, learning, and creating
+          </div>
+          <div class="anime-text">Coding ⚡</div>
+        </div>
+
+        <div class="img-content">
+          <img class="girl" src="imageopen.png" alt="Girl illustration" />
+          <img src="image.png" id="light" alt="Light effect" />
+        </div>
+      </div>
+
+      <div class="education" id="education">
+        <div class="about-wrapper">
+          <div class="about-img">
+            <img src="./image2.png" alt="About Priya" />
+          </div>
+
+          <div class="about-text">
+            <h2>My Journey</h2>
+            <p>
+              💡 My journey began with a simple curiosity for technology — a
+              spark that soon turned into a passion for <b>building</b> and
+              <b>designing</b>. I started experimenting with code, exploring how
+              things work behind the screen, and creating small projects just
+              for fun.
+            </p>
+
+            <p>
+              ⚙️ Over time, I discovered my love for both <b>coding</b> and
+              <b>design</b> — finding the balance between logic and creativity.
+              Each project taught me something new, shaping me into a
+              programmer, designer, and developer who loves turning
+              <b>ideas into interactive experiences</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="skills" id="skills">
+        <h2 class="skills-title">My Skills</h2>
+
+        <div class="skills-container">
+          <div class="skill-card">
+            <h3 class="skill-heading">Programming Languages</h3>
+            <div class="skills-list">
+              <span>C</span>
+              <span>C++</span>
+              <span>Python</span>
+              <span>JavaScript</span>
+              <span>Java</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3 class="skill-heading">Frontend & UI</h3>
+            <div class="skills-list">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Figma</span>
+              <span>VueJS</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3 class="skill-heading">Backend & Tools</h3>
+            <div class="skills-list">
+              <span>Flask</span>
+              <span>SQLite</span>
+              <span>Git</span>
+              <span>VS Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="connect" id="connect">
+        <div class="connect-page">
+          <div class="connect-form">
+            <div class="lets-text">Let's Connect</div>
+            <form action="">
+              <div class="mb-3">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Priya Dharshini" />
+              </div>
+
+              <div class="mb-3">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="priyavel704@gmail.com"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  rows="4"
+                  placeholder="Type your message..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn">Send Message</button>
+            </form>
+          </div>
+
+          <div class="chair-image">
+            <img src="chair.png" alt="Chair image" />
+          </div>
+        </div>
+
+        <div>© 2025 Priya Dharshini | All Rights Reserved</div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

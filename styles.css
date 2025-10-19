@@ -1,0 +1,616 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --light: #F0D2FF;
+  --dark: #DC96FF;
+  --medium: #dc96ff;
+  --darkest: rgba(195, 100, 243, 0.7);
+  --black: #000;
+  --light-black: rgb(21, 18, 18);
+}
+@keyframes fadeInRight {
+  0% {
+    transform: translateY(50px);
+  }
+  50%{
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadein{
+  0%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 0.2;
+  }
+  50%{
+    opacity: 0.4;
+  }
+  75%{
+    opacity: 0.6;
+  }
+  100%{
+    opacity: 0.7;
+  }
+}
+
+@keyframes floatin {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -15px); }
+  100% { transform: translate(0, 0); }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background: var(--black);
+}
+
+
+.head{
+  font-weight: bold;
+  color: var(--dark);
+}
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4.5rem;
+  background: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  z-index: 3;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.header i {
+  font-size: 1.8rem;
+  color: var(--medium);
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.buttons a {
+  color: var(--light);
+  text-decoration: none;
+  margin-right: 2.5rem;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.buttons a:hover {
+  color: var(--dark);
+}
+
+.btn {
+  background: rgba(195, 100, 243, 0.7);
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.8rem 1.3rem;
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 9999;
+  position: relative;
+}
+
+.btn:hover {
+  background: var(--dark);
+  transform: translateY(-2px);
+}
+
+.content {
+  background: var(--black);
+  width: 100%;
+  min-height: 85vh;
+  overflow: hidden;
+  padding-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.text-content {
+  margin-left: 10rem;
+  max-width: 40%;
+}
+
+.text-content .light-text {
+  color: var(--light);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.text-content .light-text span {
+  color: var(--dark);
+}
+
+.text-content .big-text {
+  font-size: 4.5rem;
+  color: var(--dark);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+
+.text-content .small-text {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0rem;
+}
+
+.text-content .anime-text {
+  font-size: 2.5rem;
+  color: var(--medium);
+}
+
+.img-content {
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-content .girl {
+  width: 30rem;
+  position: relative;
+  z-index: 2;
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+
+.img-content #light {
+  position: absolute;
+  top: 1rem;
+  opacity: 0;
+  width: 44rem;
+  z-index: 1;
+  animation: fadein 1.2s ease-out forwards;
+}
+
+
+.education,
+.skills,
+.projects,
+.connect {
+  background: var(--light-black);
+  color: white;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.09rem;
+}
+
+.connect {
+  background: var(--black);
+  min-height: 100vh;
+  width: 100vw;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15rem 10rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.connect > div:first-child {
+  font-size: 3rem;
+  margin-top: 8rem;
+  color: var(--light);
+  margin-bottom: 3rem;
+  text-align: center;
+
+}
+
+.connect-page {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 1200px;
+  gap: 3rem;
+}
+
+.connect-form {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 40%;
+  box-shadow: 0 0 15px rgba(220, 150, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.connect-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(220, 150, 255, 0.35);
+}
+
+.connect-form .mb-3 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.connect-form .mb-3 label {
+  flex: 1;
+  margin-bottom: 0;
+  font-size: 1rem;
+  color: var(--light);
+}
+.lets-text{
+  font-size: 2rem;
+letter-spacing: 0.0;
+padding-bottom: 2rem;
+}
+.connect-form .mb-3 input,
+.connect-form .mb-3 textarea {
+  flex: 2;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.connect-form .mb-3 input:focus,
+.connect-form .mb-3 textarea:focus {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.connect-form button {
+  width: 100%;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+   background: rgba(195, 100, 243, 0.7);
+  border-radius: 0.3rem;
+  padding: 0.8rem 0.3rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.connect-form button:hover {
+  background: var(--medium);
+  transform: translateY(-3px);
+}
+
+.chair-image img {
+  width: 35rem;
+  max-width: 90%;
+  z-index: 3;
+  position: relative;
+  animation: floatin 3s ease-in-out infinite;
+}
+
+
+.connect > div:last-child {
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+.floating-elements {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.float-circle {
+  position: absolute;
+  background: rgba(220, 150, 255, 0.3);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, 0);
+  transition: transform 0.1s linear;
+}
+
+
+.float-circle:nth-child(1) { animation: float 7s ease-in-out infinite; width: 100px; height: 100px; top:20%; left:10%; }
+.float-circle:nth-child(2) { animation: float 10s ease-in-out infinite; width: 80px; height: 80px; top:40%; left:70%; }
+.float-circle:nth-child(3) { animation: float 8s ease-in-out infinite; width: 40px; height: 40px; top:60%; left:30%; }
+.float-circle:nth-child(4) { animation: float 9s ease-in-out infinite; width: 70px; height: 70px; top:80%; left:80%; }
+.float-circle:nth-child(5) { animation: float 12s ease-in-out infinite; width: 50px; height: 50px; top:50%; left:50%; }
+
+.education {
+  background: var(--black);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  overflow: hidden;
+}
+
+.about-wrapper {
+  display: flex;
+  width: 90%;
+  max-width: 1300px;
+  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.about-img {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+}
+
+
+.about-img {
+  flex-basis: 60%; 
+}
+
+
+.about-text {
+  flex-basis: 40%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  color: #fff;
+  padding: 3rem;
+  margin-left: -2rem;
+  margin-top:6rem; 
+  margin-bottom: 3rem;
+  z-index: 2;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--dark);
+  text-align: center;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.about-text ul {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.about-text li {
+  list-style-type: "✨ ";
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--light);
+}
+
+
+
+
+.skills {
+  width: 100%;
+  padding: 4rem 2rem;
+  background: var(--light-black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--light);
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1100px;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  min-width: 280px;
+  flex: 1 1 300px;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+}
+
+.skill-heading {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  text-align: center;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.skills-list span {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  text-align: center;
+  transition: background 0.3s;
+ img{
+  width:50px;
+ }
+ 
+}
+
+.skills-list span:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 2rem;
+  }
+  .skill-card {
+    min-width: 240px;
+  }
+
+  .connect-page {
+    flex-direction: column;
+  }
+
+  .connect-form {
+    width: 90%;
+  }
+
+  .connect-form .mb-3 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .connect-form .mb-3 input,
+  .connect-form .mb-3 textarea {
+    flex: 1;
+    width: 100%;
+  }
+
+  .chair-image img {
+    width: 250px;
+  }
+}
+
+
+
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    padding: 6rem 2rem 2rem 2rem;
+  }
+
+  .text-content {
+    margin: 2rem 0;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .img-content {
+    width: 100%;
+  }
+
+  .img-content .girl {
+    width: 22rem;
+  }
+
+  .img-content #light {
+    width: 28rem;
+  }
+
+  .buttons a {
+    margin-right: 1.2rem;
+    font-size: 1rem;
+  }
+  .about-wrapper {
+    flex-direction: column;
+  }
+
+  .about-img,
+  .about-text {
+    flex-basis: 100%;
+    margin: 0;
+  }
+
+  .about-text {
+    margin-top: 2rem;
+  }
+
+  .about-img img {
+    border-radius: 15px;
+    position: relative;
+    height: auto;
+  }
+}
